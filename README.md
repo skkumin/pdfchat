@@ -12,14 +12,19 @@ Hallucination(환각)은 이런 LLM의 제일 큰 단점으로 이는 pretrain�
 ### 📂 DEMO
 
 openai의 api를 이용해 직접 PDF Chat을 구현한 데모로 기존 서비스 중인[PDF chat](https://www.chatpdf.com/?via=rickt1)의 기능에 추가적으로 2개의 PDF를 선택해 채팅할 수 있도록 데모를 제작하였으며 그 작동원리는 아래 [Muti PDF chat]을 통해 확인할 수 있다.
-
+해당 작동원리에 대한 설명은 📂프로젝트상세/Demo.pdf에서 확인할 수 있다.
 
 <p align="center">
 <img src="https://github.com/skkumin/pdfchat/assets/98961173/4e253ba2-112e-421f-a7dc-dce5279ddc7e">
+</p>
+<p align="center">
 [PDF chat]
 </p>
-
 <p align="center">
 <img src="https://github.com/skkumin/pdfchat/assets/98961173/03c2eb3b-a761-4358-bb92-6b6b6b37a633">
+</p>
+<p align="center">
 [Muti PDF chat]
 </p>
+
+### 📂 DEMO
