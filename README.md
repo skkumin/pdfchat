@@ -37,7 +37,11 @@ gpt-3.5-tubo를 이용하여 만들었으며 정답 있는 데이터셋 9909개,
 <img src="https://github.com/skkumin/pdfchat/assets/98961173/87e3065f-2f67-4659-bef5-b20f14e460dd">
 </p>
 <p align="center">
-<img src="https://github.com/skkumin/pdfchat/assets/98961173/7ae8fa9c-7260-4459-a020-b8e0b63b99b2">
+<img src="https://github.com/skkumin/pdfchat/assets/98961173/0df43161-f87f-4b4a-8390-2db22e53caec">
 </p>
 
+해당 데이터를 아래와 같은 Prompt에 집어넣어 LLM이 downstreamtask인 MRC를 잘하도록 finetunning하였고 이때 QLora를 사용하여 진행하였다.
+<p align="center">
+<img src="https://github.com/skkumin/pdfchat/assets/98961173/86868d7d-e941-40ae-9748-2b05b5416a88">
+</p>
 
