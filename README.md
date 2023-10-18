@@ -11,8 +11,8 @@ Hallucination(환각)은 이런 LLM의 제일 큰 단점으로 이는 pretrain�
 
 ### 📂 DEMO
 
-openai의 api를 이용해 직접 PDF Chat을 구현한 데모로 기존 서비스 중인[PDF chat](https://www.chatpdf.com/?via=rickt1)의 기능에 추가적으로 2개의 PDF를 선택해 채팅할 수 있도록 데모를 제작하였으며 그 작동원리는 아래 [Muti PDF chat]을 통해 확인할 수 있다.
-해당 작동원리에 대한 설명은 📂프로젝트상세/Demo.pdf에서 확인할 수 있다.
+openai의 gpt-3.5-turbo API를 이용해 직접 PDF Chat을 구현한 데모로 기존 서비스 중인[PDF chat](https://www.chatpdf.com/?via=rickt1)의 기능에 추가적으로 2개의 PDF를 선택해 채팅할 수 있도록 데모를 제작하였으며 그 작동원리는 아래 [Muti PDF chat]을 통해 확인할 수 있다.
+해당 작동원리에 대한 자세한 설명은 📂프로젝트상세/Demo.pdf에서 확인할 수 있다.
 
 <p align="center">
 <img src="https://github.com/skkumin/pdfchat/assets/98961173/4e253ba2-112e-421f-a7dc-dce5279ddc7e">
@@ -27,4 +27,17 @@ openai의 api를 이용해 직접 PDF Chat을 구현한 데모로 기존 서비�
 [Muti PDF chat]
 </p>
 
-### 📂 DEMO
+### 📂 fine tunning
+
+openai의 gpt-3.5-turbo API 사용 부분을 한국어 오픈소스 모델인 polyglot-ko를 이용하기위해 [context, question, answer]형식의 데이터셋을 만들고 QLora를 이용한 fine tunning을 진행하였다.  
+데이터셋은 AI Hub에서 제공하는 MRC Dataset(기계 독해 데이터셋)을 사용하였고 해당 데이터로부터 [context, question, answer]의 Data를 가져왔다.  
+가져온 데이터는 answer가 단답식으로 되있어 아래의 Prompt와 [context, question, answer]로 새로운 answer를 만들었다.  
+gpt-3.5-tubo를 이용하여 만들었으며 정답 있는 데이터셋 9909개, 정답 없는 데이터셋 2000개를 만들었고 대략 $20 정도의 API 비용이 소모되었다.  
+<p align="center">
+<img src="https://github.com/skkumin/pdfchat/assets/98961173/87e3065f-2f67-4659-bef5-b20f14e460dd">
+</p>
+<p align="center">
+<img src="https://github.com/skkumin/pdfchat/assets/98961173/7ae8fa9c-7260-4459-a020-b8e0b63b99b2">
+</p>
+
+
